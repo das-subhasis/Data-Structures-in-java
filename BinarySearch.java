@@ -57,11 +57,46 @@ public class BinarySearch {
     // return false;
     // }
 
+    // Order Agnostic Binary Search - binary sorting an array when it's status is
+    // unknown (sorted/unsorted/Ascendiing/Descending)
+    static int binSortOA(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+        if (arr[start] > arr[end]) {
+            while (start <= end) {
+                int mid = start + (end - start) / 2;
+                if (target > arr[mid]) {
+                    end = mid - 1;
+                } else if (target < arr[mid]) {
+                    start = mid + 1;
+                } else {
+                    return mid;
+                }
+            }
+        }
+        else if (arr[start] < arr[end]) {
+            while (start <= end) {
+                int mid = start + (end - start) / 2;
+                if (target < arr[mid]) {
+                    end = mid - 1;
+                } else if (target > arr[mid]) {
+                    start = mid + 1;
+                } else {
+                    return mid;
+                }
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 54, 78, 90 };
-        int bin = binSort(arr, 54);
-        if (bin!=-1) {
+        int[] arr2 = {  90,78,54 , 3, 2, 1 };
+
+        int bin = binSortOA(arr, 54);
+        int bin2 = binSortOA(arr2, 78);
+        if (bin != -1) {
             System.out.println(String.format("array found at position %d", bin));
+            System.out.println(String.format("array found at position %d", bin2));
         } else {
             System.out.println("array not found");
         }
