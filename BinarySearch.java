@@ -121,10 +121,9 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 54, 78, 90 };
-        int[] arr2 = { 90, 78, 54, 3, 2, 1 };
+        // int[] arr2 = { 90, 78, 54, 3, 2, 1 };
 
         int bin = binSortOA(arr, 54);
-        int bin2 = binSortOA(arr2, 11);
         int ceil = ceil(arr, 55);
         if (bin != -1) {
             System.out.println(String.format("array found at position %d", bin));
