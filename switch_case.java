@@ -9,5 +9,6 @@ class switch_case {
             case "apple" -> System.out.println("Sweet and Delicious");
             default -> System.out.println("Healthy for body");
         }
+        in.close();
     }
 }

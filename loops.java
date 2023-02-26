@@ -13,6 +13,7 @@ public class loops {
                 System.out.println(i);
             }
         }
+        in.close();
     }
 
     // Checking prime integers
