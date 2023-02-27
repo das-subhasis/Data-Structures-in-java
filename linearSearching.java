@@ -1,21 +1,21 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class linearSearching {
     public static void main(String[] args) {
-        int[] arr = { 22, 15, 16, 14, 19, 20 };
-        Scanner in = new Scanner(System.in);
+        // int[] arr = { 22, 15, 16, 14, 19, 20 };
+        // Scanner in = new Scanner(System.in);
         // System.out.print("Enter key Search Element: ");
         // int key = in.nextInt();
 
         // Best Case Scenario O(n) = 1 [Constant]
         // Element Found at the First Index
-        char key = 'a';
+        // char key = 'a';
         // System.out.println(searchInString("Rohit", key));
 
         // Worst Case Scenario O(n)
         // Element Not Found at all
         int[][] accounts = {{1,5},{3,7},{5,6}};
-        key = 64;
+        // key = 64;
         // System.out.println(linearSearch(arr, key, 2, 6));
         System.out.println(maxWealth(accounts));
         // System.out.println(searchEven(arr));
